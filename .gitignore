@@ -1,0 +1,16 @@
+# Dependency directories
+node_modules/
+
+# Build outputs
+dist/
+out/
+
+# Environment files (sensitive keys)
+.env
+.env.local
+
+# VS Code settings / caches
+.vscode/
+.history/
+*.vsix
+package-lock.json

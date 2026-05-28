@@ -1,0 +1,67 @@
+{
+  "name": "kelvcodes-ai",
+  "displayName": "KelvCodes AI",
+  "description": "Clean, lightweight sidebar panel for AI assistant streaming directly in VS Code.",
+  "version": "1.0.0",
+  "publisher": "kelvcodes",
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "categories": [
+    "Machine Learning",
+    "Programming Languages",
+    "Developer Tools"
+  ],
+  "main": "./dist/extension.js",
+  "activationEvents": [
+    "onView:kelvcodes-ai.chatView"
+  ],
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "kelvcodes-ai-sidebar",
+          "title": "KelvCodes AI",
+          "icon": "media/icon.svg"
+        }
+      ]
+    },
+    "views": {
+      "kelvcodes-ai-sidebar": [
+        {
+          "type": "webview",
+          "id": "kelvcodes-ai.chatView",
+          "name": "KelvCodes AI",
+          "visibility": "visible"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "kelvcodes-ai.resetChat",
+        "title": "Reset Chat",
+        "category": "KelvCodes AI",
+        "icon": "$(discard)"
+      }
+    ],
+    "menus": {
+      "view/title": [
+        {
+          "command": "kelvcodes-ai.resetChat",
+          "when": "view == kelvcodes-ai.chatView",
+          "group": "navigation"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.18",
+    "@types/vscode": "^1.75.0",
+    "typescript": "^5.0.4"
+  }
+}
