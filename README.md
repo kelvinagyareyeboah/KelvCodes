@@ -1,2 +1,2 @@
 
-kelvcodes is atweight VS Code extension designed to brin-speed code generation, contextual refactorin
+kelvcodes is atweight VS Code sion designed to brin-speed code generation, contextual refactorin
