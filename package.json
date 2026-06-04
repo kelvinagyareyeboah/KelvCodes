@@ -4,6 +4,10 @@
   "description": "Clean, lightweight sidebar panel for AI assistant streaming directly in VS Code.",
   "version": "1.0.0",
   "publisher": "kelvcodes",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kelvinagyareyeboah/KelvCodes.git"
+  },
   "engines": {
     "vscode": "^1.75.0"
   },
